@@ -5,9 +5,9 @@ class Vuelo(object):
     origen=None
     destino=None
 
-    def __init__(self,tripulacion):
-        self.tripulacion=tripulacion[]
-        self.pasajeros=pasajeros[]
+    def __init__(self):
+        self.tripulacion=[]
+        self.pasajeros=[]
 
     def AgregarVuelo(self,Vuelo):
         self.Avion=Vuelo["avion"]

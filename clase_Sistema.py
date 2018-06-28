@@ -1,16 +1,29 @@
+from clase_Avion import Avion
 
 class Sistema (object):
-
     def __init__(self):
         self.personas=[]
-    def __init__(self):
-        self.tripulantes=[]
-    def __init__(self):
-        self.pasajeros=[]
+        self.aviones=[]
+        self.vuelos=[]
 
-    def setAgregarAvion(self):
-        self.personas=personas
+    def AgregarAviones(self,Avion):
+        self.aviones.append(Avion)
 
-    def setAgregarSistema(self):
-        return
+    def AgregarPersonas(self,Persona):
+        self.personas.append(Persona)
+
+    def AgregarVuelos(self,Vuelo):
+        self.vuelos.append(Vuelo)
+
+    def BuscarAvion(self,codigo_avion):
+        for item in self.aviones:
+            if codigo_avion== item.codigo:
+                return item
+
+
+    def BuscarPersona(self,dni):
+        for item in self.personas:
+            if dni== item.dni:
+                return item
+
 
