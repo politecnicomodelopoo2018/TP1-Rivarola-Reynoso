@@ -35,4 +35,4 @@ class Piloto(Personas):
     aviones_habilitados_piloto=None
 
     def AgregarPiloto(self,Piloto):
-        self.aviones_habilitados_piloto=Piloto["avionesHablitados"]
+        self.aviones_habilitados_piloto=Piloto["avionesHabilitados"]
