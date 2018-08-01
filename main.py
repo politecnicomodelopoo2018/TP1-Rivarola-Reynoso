@@ -10,4 +10,4 @@ Empleado=Empleado()
 Sucursal=Sucursal()
 DB= DB()
 
-claseSucursal = Sucursal.AgregarSucursal(None, "Pueyrredon", "cramer 4567")
+claseSucursal = Sucursal.AgregarSucursal(None, "Pueyrredn", "cramer 4567")
