@@ -12,8 +12,8 @@ class DB(object):
 
             cursor = db.cursor(pymysql.cursors.DictCursor)
             cursor.execute(query)
+            cursor_fetcheado = cursor.fetchall()
             db.close()
-            return cursor
-
+            return cursor_fetcheado
 
 

@@ -6,12 +6,19 @@ class Cliente(object):
     menu=None
     idSucursal=None
 
-    def AgregarCliente(self,id,queja,menu,sucursal):
-        self.idCliente=id
+    def AgregarCliente(self,idCliente,queja,menu,sucursal):
+        self.idCliente=idCliente
         self.quejas=queja
         self.menu=menu
         self.idSucursal=sucursal
 
-    def InsertCliente(self,idC,queja,menu,sucursal):
-        Agregarcliente = db.cursor()
-        Agregarcliente.execute ("INSERT INTO Clientes VALUES (NULL,' " + idC + "', ' "+ queja +" ', " + menu + " ,"  +sucursal+");")
+        DB().run("INSERT INTO Clientes VALUES (NULL,' " + queja + " ', " + menu + " ," + sucursal + ");")
+
+
+    def BorrarCliente(self, idCliente):
+        BorrarCliente = db.cursor()
+        BorrarCliente.execute ("DELETE FROM Clientes WHERE idCliente = " + idCliente + ";")
+
+
+        # #falta el adbdeit
+        # #pasar al main
