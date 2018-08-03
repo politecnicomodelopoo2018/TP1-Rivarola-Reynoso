@@ -12,13 +12,19 @@ class Cliente(object):
         self.menu=menu
         self.idSucursal=sucursal
 
-        DB().run("INSERT INTO Clientes VALUES (NULL,' " + queja + " ', " + menu + " ," + sucursal + ");")
+        DB().run("INSERT INTO Clientes VALUES (NULL,' " + queja + " ', '" + menu + "' ,'" + sucursal + "');")
 
 
     def BorrarCliente(self, idCliente):
-        BorrarCliente = db.cursor()
+        BorrarCliente = DB.cursor()
         BorrarCliente.execute ("DELETE FROM Clientes WHERE idCliente = " + idCliente + ";")
 
 
         # #falta el adbdeit
         # #pasar al main
+
+    def DeserializarCliente(self, DicCliente):
+        self.idCliente= DicCliente["idCliente"]
+        self.quejas= DicCliente["quejas"]
+        self.menu= DicCliente["menu"]
+        self.idSucursal=DicCliente["idSucursal"]

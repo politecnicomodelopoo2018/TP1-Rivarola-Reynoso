@@ -1,3 +1,4 @@
+from dos import DB
 class Sucursal(object):
     idSucursal=None
     nombreS=None
@@ -8,9 +9,14 @@ class Sucursal(object):
         self.nombreS=nombre
         self.direccionS=direccion
 
-        AgregarSucursal= db.cursor(pymysql.cursors.DictCursor)
+        AgregarSucursal= DB.cursor(pymysql.cursors.DictCursor)
         AgregarSucursal.execute("INSERT INTO Sucursal VALUES (NULL,' "+ nombre +" ', " + direccion + ");")
 
     def BorrarSucursal (self,idSucursal):
-        BorrarSucursal= db.cursor()
+        BorrarSucursal= DB.cursor()
         BorrarSucursal.execute ("DELETE FROM Sucursal WHERE idCliente = " + idSucursal + ";")
+
+    def DeserializarSucursal(self, DicSucursal ):
+        self.idSucursal= DicSucursal["idSucursal"]
+        self.nombreS= DicSucursal["nombreS"]
+        self.direccionS= DicSucursal["direccionS"]

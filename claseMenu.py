@@ -1,3 +1,4 @@
+from dos import DB
 class Menu(object):
     idMenu=None
     nombre=None
@@ -10,10 +11,16 @@ class Menu(object):
         self.precioMenu=precioMenu
         self.tipoMenu=tipoMenu
 
-        DB.run("INSERT INTO Menues VALUES (NULL,' "+ nombre +" ', " + precioMenu + " ,"  +tipoMenu+");")
+        DB.run("INSERT INTO Menues VALUES (NULL,' "+ nombre +" ', '" + precioMenu + "' ,'"  +tipoMenu+"');")
 
     def borrarMenu(self,idMenu):
-        BorrarMenu= db.cursor()
+        BorrarMenu= DB.cursor()
         BorrarMenu.execute ("DELETE FROM Menues WHERE idMenues = " + idMenu + ";")
 
     #falta el adbdeit
+
+    def DeserializarMenu(self, DicMenu):
+        self.idMenu=DicMenu["idMenu"]
+        self.nombre=DicMenu["nombre"]
+        self.precioMenu=DicMenu["precioMenu"]
+        self.tipoMenu=DicMenu["tipoMenu"]

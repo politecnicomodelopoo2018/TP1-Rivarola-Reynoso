@@ -1,3 +1,7 @@
+
+# import pymysql
+
+
 from dos import DB
 from claseCliente import Cliente
 from claseMenu import Menu
@@ -8,6 +12,10 @@ Cliente = Cliente()
 Menu= Menu()
 Empleado=Empleado()
 Sucursal=Sucursal()
-DB= DB()
+db = DB()
 
-claseSucursal = Sucursal.AgregarSucursal(None, "Pueyrrdn", "cramer 4567")
+
+#claseSucursal = Sucursal.AgregarSucursal(None, "Pueyrrdn", "cramer 4567")
+
+
+claseMenu= Menu.borrarMenu(1)

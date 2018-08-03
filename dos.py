@@ -2,7 +2,7 @@ import pymysql
 
 class DB(object):
 
-    def run (query):
+    def run (self,query):
             db = pymysql.connect(host="localhost",
                                  user="root",
                                  passwd="alumno",
@@ -15,5 +15,7 @@ class DB(object):
             cursor_fetcheado = cursor.fetchall()
             db.close()
             return cursor_fetcheado
+
+
 
 
