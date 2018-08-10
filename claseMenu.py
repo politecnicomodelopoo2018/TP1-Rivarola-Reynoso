@@ -13,9 +13,8 @@ class Menu(object):
 
         DB.run("INSERT INTO Menues VALUES (NULL,' "+ nombre +" ', '" + precioMenu + "' ,'"  +tipoMenu+"');")
 
-    def borrarMenu(self,idMenu):
-        BorrarMenu= DB.cursor()
-        BorrarMenu.execute ("DELETE FROM Menues WHERE idMenues = " + idMenu + ";")
+    def BorrarMenu(self,idMenu):
+        DB.run("DELETE FROM Menues WHERE idMenues = " + idMenu + ";")
 
     #falta el adbdeit
 
