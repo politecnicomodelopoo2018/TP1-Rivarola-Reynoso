@@ -12,9 +12,10 @@ class Sucursal(object):
         AgregarSucursal= DB.cursor(pymysql.cursors.DictCursor)
         AgregarSucursal.execute("INSERT INTO Sucursal VALUES (NULL,' "+ nombre +" ', " + direccion + ");")
 
-    def BorrarSucursal (self,idSucursal):
+    @staticmethod
+    def BorrarSucursal (idSucursal):
         BorrarSucursal= DB.cursor()
-        BorrarSucursal.execute ("DELETE FROM Sucursal WHERE idCliente = " + idSucursal + ";")
+        BorrarSucursal.execute ("DELETE FROM Sucursal WHERE idSucursal = " + idSucursal + ";")
 
     def DeserializarSucursal(self, DicSucursal ):
         self.idSucursal= DicSucursal["idSucursal"]

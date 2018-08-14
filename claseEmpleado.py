@@ -19,8 +19,8 @@ class Empleado(object):
             AgregarSucursal.execute("INSERT INTO Empleados VALUES (NULL,' " + nombreE + " ', '" + apellidoE + "', '"+DNIE+ "','"+IDsucursal+"');")
 
 
-
-    def BorrarEmpleado(self,idEmpleado):
+    @staticmethod
+    def BorrarEmpleado(idEmpleado):
         BorrarEmpleado= DB.cursor(pymysql.cursors.DictCursor)
         BorrarEmpleado.execute("DELETE FROM Empleados WHERE idEmpleado = " + idEmpleado + ";")
 
