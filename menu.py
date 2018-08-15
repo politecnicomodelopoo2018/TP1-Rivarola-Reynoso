@@ -39,26 +39,33 @@ class Menuu(object):
 
         if opcion == "1":
             cliente.AgregarCliente(None,"muy sucio","Cuarto de libra",1)
+
         if opcion == "2":
             Cliente.BorrarCliente(1)
+
         if opcion== "3":
 
         if opcion== "4":
             Menu.AgregarMenu(None,"Cuarto de libra","345",None)
+
         if opcion== "5":
             Menu.BorrarMenu(3)
+
         if opcion=="6":
 
         if opcion=="7":
            Empleado.AgregarEmpleado(None,"Juan","Perez","43018547",1)
         if opcion=="8":
+
             Empleado.BorrarEmpleado(2)
         if opcion=="9":
 
         if opcion=="10":
-           Sucursal.AgregarSucursal(None,"DEvto","AV.josejha.com ahre ")
+            Sucursal.AgregarSucursal(None,"DEvto","AV.josejha.com ahre ")
+
         if opcion=="11":
             Sucursal.BorrarSucursal(3)
+
         if opcion=="12":
 
 

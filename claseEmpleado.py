@@ -24,6 +24,9 @@ class Empleado(object):
         BorrarEmpleado= DB.cursor(pymysql.cursors.DictCursor)
         BorrarEmpleado.execute("DELETE FROM Empleados WHERE idEmpleado = " + idEmpleado + ";")
 
+    def UpdateEmpleado(idEmpleado):
+        DB().run("update Empleado set idEmpleado= "+idEmpleado+", nombreEmpleado= "+nombreEmpleado+",apellidoEmpleado= "+apellidoEmpleado+",DNIempleado= "+DNIempleado+", ;")
+
     def DeserializarEmpleado(self, DicEmpleado):
         self.idEmpleado= DicEmpleado["idEmpleado"]
         self.nombreEmpleado=DicEmpleado["nombreEmpleado"]

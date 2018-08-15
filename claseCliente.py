@@ -20,7 +20,7 @@ class Cliente(object):
 
 
     def UpdateCliente(idCliente):
-        DB().run("update Clientes set idCliente= "+idCliente+", quejas= "+quejas+",menu= "+menu+",idSucursal="+idSucursal+")
+        DB().run("update Clientes set idCliente= "+idCliente+", quejas= "+quejas+",menu= "+menu+",idSucursal="+idSucursal+");)
 
 
 

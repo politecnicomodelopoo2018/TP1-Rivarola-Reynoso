@@ -15,7 +15,7 @@ class Sucursal(object):
      BD().run("DELETE FROM Sucursal WHERE idCliente = " + idSucursal + ";")
 
     def UpdateSucursal(idCliente):
-        DB().run("update Sucursal set idSucursal= "+idCliente+", nombreS= "+nombreS+",direccionS= "+direccionS+"")
+        DB().run("update Sucursal set idSucursal= "+idCliente+", nombreS= "+nombreS+",direccionS= "+direccionS+";")
 
     def DeserializarSucursal(self, DicSucursal ):
         self.idSucursal= DicSucursal["idSucursal"]

@@ -17,7 +17,7 @@ class Menu(object):
         DB.run("DELETE FROM Menues WHERE idMenues = " + idMenu + ";")
 
     def UpdateMenu(idCliente):
-        DB().run("update Menu set idMenu= "+idMenu+", nombre= "+nombre+",precioMenu= "+precioMenu+",tipoMenu="+tipoMenu+")
+        DB().run("update Menu set idMenu= "+idMenu+", nombre= "+nombre+",precioMenu= "+precioMenu+",tipoMenu="+tipoMenu+";")
 
     def DeserializarMenu(self, DicMenu):
         self.idMenu=DicMenu["idMenu"]
