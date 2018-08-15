@@ -11,13 +11,13 @@ class Menu(object):
         self.precioMenu=precioMenu
         self.tipoMenu=tipoMenu
 
-        DB.run("INSERT INTO Menues VALUES (NULL,' "+ nombre +" ', '" + precioMenu + "' ,'"  +tipoMenu+"');")
+        DB.run("INSERT INTO Menues VALUES (NULL,'"+ nombre +"', '" +precioMenu + "','"  +tipoMenu+"');")
 
     def BorrarMenu(self,idMenu):
-        DB.run("DELETE FROM Menues WHERE idMenues = " + idMenu + ";")
+        DB.run("DELETE FROM Menues WHERE idMenues = " + str(self.idMenu) + ";")
 
-    def UpdateMenu(idCliente):
-        DB().run("update Menu set idMenu= "+idMenu+", nombre= "+nombre+",precioMenu= "+precioMenu+",tipoMenu="+tipoMenu+";")
+    def UpdateMenu(self):
+        DB().run("update Menu set idMenu= "+str(self.idMenu)+", nombre= "+self.nombre+",precioMenu= "+self.precioMenu+",tipoMenu="+self.tipoMenu+";")
 
     def DeserializarMenu(self, DicMenu):
         self.idMenu=DicMenu["idMenu"]

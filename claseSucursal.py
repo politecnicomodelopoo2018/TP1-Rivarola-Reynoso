@@ -9,13 +9,13 @@ class Sucursal(object):
         self.nombreS=nombre
         self.direccionS=direccion
 
-     DB().run("INSERT INTO Sucursal VALUES (NULL,' "+ nombre +" ', " + direccion + ");")
+        DB().run("INSERT INTO Sucursal VALUES (NULL,'"+ self.nombreS +"', '" + self.direccionS + "');")
 
     def BorrarSucursal (self,idSucursal):
-     BD().run("DELETE FROM Sucursal WHERE idCliente = " + idSucursal + ";")
+        DB().run("DELETE FROM Sucursal WHERE idCliente = " + idSucursal + ";")
 
-    def UpdateSucursal(idCliente):
-        DB().run("update Sucursal set idSucursal= "+idCliente+", nombreS= "+nombreS+",direccionS= "+direccionS+";")
+    def UpdateSucursal(self):
+        DB().run("update Sucursal set idSucursal= "+self.idCliente+", nombreS= " + self.nombreS + ",direccionS= " + self.direccionS+";")
 
     def DeserializarSucursal(self, DicSucursal ):
         self.idSucursal= DicSucursal["idSucursal"]

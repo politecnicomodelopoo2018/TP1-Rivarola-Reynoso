@@ -13,59 +13,71 @@ Sucursal=Sucursal()
 class Menuu(object):
     opcion=None
 
-    def MenuMenu(self):
+    @staticmethod
+    def MenuMenu():
 
-        print("OPCIONES DEL CLIENTE: ")
-        print("1) Agregar un cliente")
-        print("2) Borrar un clinte")
-        print("3) Modificar un cliente")
+        while True:
 
-        print("OPCIONES DEL MENU:")
-        print("4)Agregar un menu")
-        print("5)Borrar un menu")
-        print("6)Modificar un menu")
+            print("OPCIONES DEL CLIENTE: ")
+            print("1) Agregar un cliente")
+            print("2) Borrar un clinte")
+            print("3) Modificar un cliente")
 
-        print("OPCIONES DEL EMPLEADO: ")
-        print("7) Agregar un empleado")
-        print("8) Borrar un empleado")
-        print("9) Modificas un empleado")
+            print("OPCIONES DEL MENU:")
+            print("4)Agregar un menu")
+            print("5)Borrar un menu")
+            print("6)Modificar un menu")
 
-        print("OPCIONES DE SUCURSAL: ")
-        print("10) Agregar una sucursal")
-        print("11) Borrar un menu")
-        print("12) Modificar un menu")
+            print("OPCIONES DEL EMPLEADO: ")
+            print("7) Agregar un empleado")
+            print("8) Borrar un empleado")
+            print("9) Modificas un empleado")
 
-        opcion=input("Inserte su opcion")
+            print("OPCIONES DE SUCURSAL: ")
+            print("10) Agregar una sucursal")
+            print("11) Borrar un menu")
+            print("12) Modificar un menu")
 
-        if opcion == "1":
-            cliente.AgregarCliente(None,"muy sucio","Cuarto de libra",1)
+            print("13) Salir del programa")
 
-        if opcion == "2":
-            Cliente.BorrarCliente(1)
+            opcion=input("Inserte su opcion")
 
-        if opcion== "3":
+            if opcion == "1":
+                cliente.AgregarCliente(None,"muy sucio","Cuarto de libra",1)
 
-        if opcion== "4":
-            Menu.AgregarMenu(None,"Cuarto de libra","345",None)
+            if opcion == "2":
+                Cliente.BorrarCliente(1)
 
-        if opcion== "5":
-            Menu.BorrarMenu(3)
+            if opcion== "3":
+                pass
 
-        if opcion=="6":
+            if opcion== "4":
+                Menu.AgregarMenu(None,"Cuarto de libra","345","ooo")
 
-        if opcion=="7":
-           Empleado.AgregarEmpleado(None,"Juan","Perez","43018547",1)
-        if opcion=="8":
+            if opcion== "5":
+                Menu.BorrarMenu(1)
 
-            Empleado.BorrarEmpleado(2)
-        if opcion=="9":
+            if opcion=="6":
+                pass
 
-        if opcion=="10":
-            Sucursal.AgregarSucursal(None,"DEvto","AV.josejha.com ahre ")
+            if opcion=="7":
+               Empleado.AgregarEmpleado(None,"Juan","Perez","43018547",1)
 
-        if opcion=="11":
-            Sucursal.BorrarSucursal(3)
+            if opcion=="8":
+                Empleado.BorrarEmpleado(2)
 
-        if opcion=="12":
+            if opcion=="9":
+                pass
 
+            if opcion=="10":
+                Sucursal.AgregarSucursal(None,"DEvto","AV.josejha.com ahre ")
+
+            if opcion=="11":
+                Sucursal.BorrarSucursal(3)
+
+            if opcion=="12":
+                pass
+
+            if opcion =="13":
+                break
 

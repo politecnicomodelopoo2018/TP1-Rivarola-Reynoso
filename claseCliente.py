@@ -12,15 +12,15 @@ class Cliente(object):
         self.menu=menu
         self.idSucursal=sucursal
 
-         DB().run("INSERT INTO Clientes VALUES (NULL,' " + queja + " ', '" + menu + "' ,'" + sucursal + "');")
+        DB().run("INSERT INTO Clientes VALUES (NULL,'" + queja + "', '" + menu + "' ,'" + str(sucursal) + "');")
 
-
+    @staticmethod
     def BorrarCliente(idCliente):
-        DB().run("DELETE FROM Clientes WHERE idCliente = " + idCliente + ";")
+        DB().run("DELETE FROM Clientes WHERE idCliente = "+str(idCliente)+";")
 
 
-    def UpdateCliente(idCliente):
-        DB().run("update Clientes set idCliente= "+idCliente+", quejas= "+quejas+",menu= "+menu+",idSucursal="+idSucursal+");)
+    def UpdateCliente(self):
+        DB().run("update Clientes set idCliente= "+self.idCliente+", quejas= '"+self.quejas+"',menu= "+self.menu+",idSucursal="+self.idSucursal+");")
 
 
 
