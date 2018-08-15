@@ -1,7 +1,5 @@
 
-# import pymysql
-
-
+import pymysql
 from dos import DB
 from claseCliente import Cliente
 from claseMenu import Menu

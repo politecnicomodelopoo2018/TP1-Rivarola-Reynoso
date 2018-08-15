@@ -38,27 +38,27 @@ class Menuu(object):
         opcion=input("Inserte su opcion")
 
         if opcion == "1":
-            AgregarCliente(None,"muy sucio","Cuarto de libra",1)
-        elif opcion == "2":
-            BorrarCliente(1)
-        elif opcion== "3":
+            cliente.AgregarCliente(None,"muy sucio","Cuarto de libra",1)
+        if opcion == "2":
+            Cliente.BorrarCliente(1)
+        if opcion== "3":
 
-        elif opcion== "4":
-            AgregarMenu(None,"Cuarto de libra","345",None)
-        elif opcion== "5":
-            BorrarMenu(3)
-        elif opcion=="6":
+        if opcion== "4":
+            Menu.AgregarMenu(None,"Cuarto de libra","345",None)
+        if opcion== "5":
+            Menu.BorrarMenu(3)
+        if opcion=="6":
 
-        elif opcion=="7":
-           AgregarEmpleado(None,"Juan","Perez","43018547",1)
-        elif opcion=="8":
-           BorrarEmpleado(2)
-        elif opcion=="9":
+        if opcion=="7":
+           Empleado.AgregarEmpleado(None,"Juan","Perez","43018547",1)
+        if opcion=="8":
+            Empleado.BorrarEmpleado(2)
+        if opcion=="9":
 
-        elif opcion=="10":
-           AgregarSucursal(None,"DEvto","AV.josejha.com ahre ")
-        elif opcion=="11":
-            BorrarSucursal(3)
-        elif opcion=="12":
+        if opcion=="10":
+           Sucursal.AgregarSucursal(None,"DEvto","AV.josejha.com ahre ")
+        if opcion=="11":
+            Sucursal.BorrarSucursal(3)
+        if opcion=="12":
 
 

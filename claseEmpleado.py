@@ -15,14 +15,13 @@ class Empleado(object):
             self.idSucursal=IDsucursal
 
 
-            AgregarSucursal = DB.cursor(pymysql.cursors.DictCursor)
-            AgregarSucursal.execute("INSERT INTO Empleados VALUES (NULL,' " + nombreE + " ', '" + apellidoE + "', '"+DNIE+ "','"+IDsucursal+"');")
-
-
+           DB().run("INSERT INTO Empleados VALUES (NULL,' " + nombreE + " ', '" + apellidoE + "', '"+DNIE+ "','"+IDsucursal+"');")
 
     def BorrarEmpleado(self,idEmpleado):
-        BorrarEmpleado= DB.cursor(pymysql.cursors.DictCursor)
-        BorrarEmpleado.execute("DELETE FROM Empleados WHERE idEmpleado = " + idEmpleado + ";")
+       DB().run("DELETE FROM Empleados WHERE idEmpleado = " + idEmpleado + ";")
+
+    def UpdateEmpleado(idCliente):
+        DB().run("update Empleado set idEmpleado= "+idEmpleado+", nombreEmpleado= "+nombreEmpleado+",apellidoEmpleado= "+apellidoEmpleado+",dniEmpleado="+dniEmpleado+",idSucursal="+idSucursal+")
 
     def DeserializarEmpleado(self, DicEmpleado):
         self.idEmpleado= DicEmpleado["idEmpleado"]
